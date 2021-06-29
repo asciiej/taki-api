@@ -1,0 +1,26 @@
+{
+  "name": "taki-backend",
+  "version": "1.0.0",
+  "description": "API do sistema de gerenciamento de poltronas",
+  "main": "server.js",
+  "repository": "https://github.com/asciiej/taki-api",
+  "author": "Kaio Souza <kaioaugusto02@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "tsnd --transpile-only --respawn src/server.ts",
+    "build": "tsc",
+    "prod": "node dist/server.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "uuid": "^8.3.2"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.12",
+    "@types/jsonwebtoken": "^8.5.2",
+    "@types/uuid": "^8.3.0",
+    "ts-node": "^10.0.0",
+    "ts-node-dev": "^1.1.7"
+  }
+}
