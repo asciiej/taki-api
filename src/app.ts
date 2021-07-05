@@ -1,4 +1,4 @@
-import router from './routes';
+import router from './routes/routes';
 
 const express = require('express');
 

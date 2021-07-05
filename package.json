@@ -9,14 +9,18 @@
   "scripts": {
     "dev": "tsnd --transpile-only --respawn src/server.ts",
     "build": "tsc",
-    "prod": "node dist/server.js"
+    "prod": "node dist/server.js",
+    "typeorm": "tsnd ./node_modules/typeorm/cli.js"
   },
   "dependencies": {
     "@typescript-eslint/parser": "^4.28.1",
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
     "jsonwebtoken": "^8.5.1",
-    "uuid": "^8.3.2"
+    "pg": "^8.6.0",
+    "typeorm": "^0.2.34",
+    "uuid": "^8.3.2",
+    "uuidv4": "^6.2.10"
   },
   "devDependencies": {
     "@types/dotenv": "^8.2.0",
