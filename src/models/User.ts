@@ -2,6 +2,13 @@ import {
   Entity, Column, PrimaryGeneratedColumn, CreateDateColumn, UpdateDateColumn,
 } from 'typeorm';
 
+export enum UserRoleType {
+  // eslint-disable-next-line no-unused-vars
+  USER = 'USER',
+  // eslint-disable-next-line no-unused-vars
+  ADMIN = 'ADMIN'
+}
+
 @Entity('users')
 class User {
   @PrimaryGeneratedColumn('uuid')
@@ -18,6 +25,12 @@ class User {
 
   @Column('varchar')
   password: string
+
+  @Column({
+    type: 'enum',
+    enum: UserRoleType,
+  })
+  role: UserRoleType
 
   @CreateDateColumn()
   created_at: Date
