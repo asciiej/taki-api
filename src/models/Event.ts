@@ -7,10 +7,10 @@ class Event {
   @PrimaryGeneratedColumn('uuid')
   id: string
 
-  @Column('datetime')
+  @Column('timestamptz')
   date: Date
 
-  @Column('place')
+  @Column('varchar')
   place: string
 
   @Column('integer')
