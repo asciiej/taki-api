@@ -26,6 +26,8 @@ export default function ensureAuthenticated(
     request.user = {
       id: sub,
     };
+
+    return next();
   } catch (e) {
     throw new Error('Invalid token');
   }
