@@ -4,9 +4,9 @@ import {
 
 export enum UserRoleType {
   // eslint-disable-next-line no-unused-vars
-  USER = 'USER',
+  USER = 'user',
   // eslint-disable-next-line no-unused-vars
-  ADMIN = 'ADMIN'
+  ADMIN = 'admin'
 }
 
 @Entity('users')
