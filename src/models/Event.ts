@@ -11,7 +11,10 @@ class Event {
   date: Date
 
   @Column('varchar')
-  place: string
+  name: string
+
+  @Column('varchar')
+  location: string
 
   @Column('integer')
   seat_count: number
