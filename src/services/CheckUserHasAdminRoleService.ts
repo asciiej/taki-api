@@ -13,12 +13,14 @@ class CheckUserHasAdminRoleService {
   public async execute({ userID }: Request): Promise<Response> {
     const userRepository = getRepository(User);
 
-    const user = await userRepository.findOne({ where: { userID } });
+    const user = await userRepository.findOne({ where: { id: userID } });
 
     if (!user) {
       throw new Error('userID does not exist');
     }
 
+    console.log(user.role);
+    console.log(UserRoleType.ADMIN);
     if (user.role !== UserRoleType.ADMIN) {
       throw new Error('User does not have permission');
     }

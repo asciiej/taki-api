@@ -13,7 +13,7 @@ class GetUserByIDService {
   public async execute({ userID }: Request): Promise<Response> {
     const userRepository = getRepository(User);
 
-    const user = await userRepository.findOne({ where: { userID } });
+    const user = await userRepository.findOne({ where: { id: userID } });
 
     if (!user) {
       throw new Error('userID does not exist');
