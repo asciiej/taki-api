@@ -7,7 +7,7 @@ class GetEventsService {
 
     const events = await eventRepository.find({
       order: {
-        date: 'ASC',
+        date: 'DESC',
       },
       cache: true,
     });
