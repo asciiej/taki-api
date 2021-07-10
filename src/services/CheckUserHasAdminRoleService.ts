@@ -19,8 +19,6 @@ class CheckUserHasAdminRoleService {
       throw new Error('userID does not exist');
     }
 
-    console.log(user.role);
-    console.log(UserRoleType.ADMIN);
     if (user.role !== UserRoleType.ADMIN) {
       throw new Error('User does not have permission');
     }
